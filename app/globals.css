@@ -34,15 +34,17 @@
 
 @layer components {
   .container-wide {
-    @apply max-w-[1440px] mx-auto px-5 md:px-10 xl:px-16;
+    @apply max-w-[1440px] mx-auto w-full;
+    padding-left: clamp(1rem, 4vw, 5rem);
+    padding-right: clamp(1rem, 4vw, 5rem);
   }
 
   .section-pad {
-    @apply py-12 sm:py-16 lg:py-28;
+    @apply py-12 sm:py-16 lg:py-24;
   }
 
   .section-pad-sm {
-    @apply py-10 sm:py-14 lg:py-20;
+    @apply py-8 sm:py-12 lg:py-16;
   }
 
   .label-tag {
