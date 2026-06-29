@@ -42,12 +42,12 @@ export default function Hero() {
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-wrap items-center gap-4 mb-16">
-            <Link href="/about" className="btn-primary">
+          <div className="flex items-center gap-3 mb-16">
+            <Link href="/about" className="btn-primary shrink-0 !px-4 sm:!px-7">
               Discover NGL
               <ArrowRight size={16} />
             </Link>
-            <Link href="/solutions" className="btn-secondary">
+            <Link href="/solutions" className="btn-secondary shrink-0 !px-4 sm:!px-7">
               Explore Solutions
             </Link>
           </div>

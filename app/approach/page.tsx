@@ -14,8 +14,9 @@ const phases = [
   {
     number: "01",
     title: "Assess",
-    color: "from-green-400/20 to-green-600/10 border-green-400/30",
-    accent: "text-green-400",
+    accent: "text-green-600",
+    dot: "bg-green-500",
+    numBg: "bg-green-50 border-green-200",
     tagline: "Understand institutional priorities",
     description:
       "We begin every engagement with a deep institutional diagnostic. This means understanding the policy context, the existing technology landscape, the people involved, and the pain points that matter most. We do not recommend solutions before we understand problems.",
@@ -31,8 +32,9 @@ const phases = [
   {
     number: "02",
     title: "Design",
-    color: "from-blue-400/20 to-blue-600/10 border-blue-400/30",
-    accent: "text-blue-400",
+    accent: "text-navy",
+    dot: "bg-navy",
+    numBg: "bg-navy-50 border-navy/20",
     tagline: "Co-create solutions with stakeholders",
     description:
       "Great technology fails when designed in isolation. NGL's design phase is a collaborative process that brings together institutional stakeholders, end users, technology architects, and change management experts to co-create solutions that will actually be used.",
@@ -48,8 +50,9 @@ const phases = [
   {
     number: "03",
     title: "Build",
-    color: "from-green-400/20 to-green-600/10 border-green-400/30",
-    accent: "text-green-400",
+    accent: "text-green-600",
+    dot: "bg-green-500",
+    numBg: "bg-green-50 border-green-200",
     tagline: "Develop and integrate systems",
     description:
       "Our engineering teams develop, configure, and integrate systems using proven technology frameworks adapted to Nigeria's institutional context. We build iteratively, with regular stakeholder reviews and clear quality gates at every milestone.",
@@ -65,8 +68,9 @@ const phases = [
   {
     number: "04",
     title: "Deploy",
-    color: "from-purple-400/20 to-purple-600/10 border-purple-400/30",
-    accent: "text-purple-400",
+    accent: "text-navy",
+    dot: "bg-navy",
+    numBg: "bg-navy-50 border-navy/20",
     tagline: "Implement and train",
     description:
       "A successful deployment is more than a technical cutover. NGL's deployment phase includes comprehensive change management, structured training programs, and a hypercare period to ensure the transition from old ways of working to new is smooth and sustainable.",
@@ -82,8 +86,9 @@ const phases = [
   {
     number: "05",
     title: "Sustain",
-    color: "from-teal-400/20 to-teal-600/10 border-teal-400/30",
-    accent: "text-teal-400",
+    accent: "text-green-600",
+    dot: "bg-green-500",
+    numBg: "bg-green-50 border-green-200",
     tagline: "Support and continuously improve",
     description:
       "NGL's commitment does not end at go-live. Our sustain phase provides ongoing technical support, continuous improvement cycles, performance monitoring, and structured knowledge transfer, building the institutional capability to manage and evolve systems independently.",
@@ -117,34 +122,33 @@ export default function ApproachPage() {
       </section>
 
       {/* Phases */}
-      <section className="section-pad bg-navy relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern" />
-        <div className="container-wide relative z-10 space-y-8">
-          {phases.map(({ number, title, color, accent, tagline, description, activities }) => (
+      <section className="section-pad bg-slate-50">
+        <div className="container-wide space-y-6">
+          {phases.map(({ number, title, accent, dot, numBg, tagline, description, activities }) => (
             <div
               key={number}
-              className={`bg-gradient-to-br ${color} border rounded-3xl p-8 lg:p-10 grid lg:grid-cols-5 gap-8`}
+              className="bg-white border border-slate-200 rounded-3xl p-8 lg:p-10 grid lg:grid-cols-5 gap-8"
             >
               <div className="lg:col-span-3">
                 <div className="flex items-center gap-4 mb-5">
-                  <span className={`font-display font-bold text-5xl ${accent} opacity-60`}>
+                  <span className={`font-display font-bold text-4xl w-16 h-16 rounded-2xl border flex items-center justify-center shrink-0 ${accent} ${numBg}`}>
                     {number}
                   </span>
                   <div>
-                    <h2 className="font-display font-bold text-white text-2xl">{title}</h2>
-                    <p className={`text-sm ${accent} font-medium`}>{tagline}</p>
+                    <h2 className="font-display font-bold text-navy text-2xl">{title}</h2>
+                    <p className={`text-sm font-medium ${accent}`}>{tagline}</p>
                   </div>
                 </div>
-                <p className="text-white/70 text-sm leading-relaxed">{description}</p>
+                <p className="text-slate text-sm leading-relaxed">{description}</p>
               </div>
               <div className="lg:col-span-2">
-                <div className="text-white/40 text-xs font-semibold uppercase tracking-wider mb-4">
+                <div className="text-slate/50 text-xs font-semibold uppercase tracking-wider mb-4">
                   Key Activities
                 </div>
                 <ul className="space-y-2.5">
                   {activities.map((act) => (
-                    <li key={act} className="flex items-center gap-2.5 text-white/70 text-sm">
-                      <span className={`w-1.5 h-1.5 rounded-full ${accent} bg-current shrink-0`} />
+                    <li key={act} className="flex items-center gap-2.5 text-slate text-sm">
+                      <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${dot}`} />
                       {act}
                     </li>
                   ))}

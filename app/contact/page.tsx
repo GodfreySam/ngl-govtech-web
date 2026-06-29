@@ -156,73 +156,68 @@ export default function ContactPage() {
 
           {/* Contact info */}
           <div className="lg:col-span-2">
-            <div className="bg-navy rounded-3xl p-8 text-white h-fit lg:sticky lg:top-28">
-              <div className="absolute inset-0 bg-dot-pattern rounded-3xl opacity-40" />
-              <div className="relative z-10">
-                <h3 className="font-display font-bold text-xl mb-8">Contact Information</h3>
+            <div className="bg-white border border-slate-200 rounded-3xl p-8 h-fit lg:sticky lg:top-28">
+              <h3 className="font-display font-bold text-navy text-xl mb-8">Contact Information</h3>
 
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-9 h-9 rounded-xl bg-green/20 flex items-center justify-center shrink-0">
-                      <Mail size={15} className="text-green-400" />
-                    </div>
-                    <div>
-                      <div className="text-xs text-white/70 mb-1 font-medium uppercase tracking-wider">Email</div>
-                      <a href="mailto:info@nasenigolborn.com" className="text-sm text-white/90 hover:text-green-400 transition-colors">
-                        info@nasenigolborn.com
-                      </a>
-                    </div>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-9 h-9 rounded-xl bg-green-50 flex items-center justify-center shrink-0">
+                    <Mail size={15} className="text-green-600" />
                   </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-9 h-9 rounded-xl bg-green/20 flex items-center justify-center shrink-0">
-                      <Phone size={15} className="text-green-400" />
-                    </div>
-                    <div>
-                      <div className="text-xs text-white/70 mb-1 font-medium uppercase tracking-wider">Phone</div>
-                      <a href="tel:+234627364" className="text-sm text-white/90 hover:text-green-400 transition-colors">
-                        234-NASENI-GOLBORN
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-9 h-9 rounded-xl bg-green/20 flex items-center justify-center shrink-0">
-                      <MapPin size={15} className="text-green-400" />
-                    </div>
-                    <div>
-                      <div className="text-xs text-white/70 mb-1 font-medium uppercase tracking-wider">Address</div>
-                      <address className="not-italic text-sm text-white/90 leading-relaxed">
-                        Plot 1, National Science &amp; Engineering
-                        <br />
-                        Infrastructure Boulevard
-                        <br />
-                        Abuja, Nigeria
-                      </address>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-9 h-9 rounded-xl bg-green/20 flex items-center justify-center shrink-0">
-                      <Clock size={15} className="text-green-400" />
-                    </div>
-                    <div>
-                      <div className="text-xs text-white/70 mb-1 font-medium uppercase tracking-wider">Hours</div>
-                      <div className="text-sm text-white/90">
-                        Monday – Friday
-                        <br />
-                        8:00 AM – 5:00 PM WAT
-                      </div>
-                    </div>
+                  <div>
+                    <div className="text-xs text-slate/60 mb-1 font-semibold uppercase tracking-wider">Email</div>
+                    <a href="mailto:info@nasenigolborn.ng" className="text-sm text-navy hover:text-green-600 transition-colors">
+                      info@nasenigolborn.ng
+                    </a>
                   </div>
                 </div>
 
-                <div className="mt-10 pt-8 border-t border-white/10">
-                  <div className="text-xs text-white/70 mb-4 font-medium uppercase tracking-wider">For Media Enquiries</div>
-                  <a href="mailto:media@nasenigolborn.com" className="text-sm text-white/80 hover:text-green-400 transition-colors">
-                    media@nasenigolborn.com
-                  </a>
+                <div className="flex items-start gap-4">
+                  <div className="w-9 h-9 rounded-xl bg-green-50 flex items-center justify-center shrink-0">
+                    <Phone size={15} className="text-green-600" />
+                  </div>
+                  <div>
+                    <div className="text-xs text-slate/60 mb-1 font-semibold uppercase tracking-wider">Phone</div>
+                    <a href="tel:+2347038564425" className="text-sm text-navy hover:text-green-600 transition-colors">
+                      07038564425
+                    </a>
+                  </div>
                 </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-9 h-9 rounded-xl bg-green-50 flex items-center justify-center shrink-0">
+                    <MapPin size={15} className="text-green-600" />
+                  </div>
+                  <div>
+                    <div className="text-xs text-slate/60 mb-1 font-semibold uppercase tracking-wider">Address</div>
+                    <address className="not-italic text-sm text-navy leading-relaxed">
+                      6th Floor, Bank of Agriculture Building
+                      <br />
+                      Abuja, Nigeria
+                    </address>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-9 h-9 rounded-xl bg-green-50 flex items-center justify-center shrink-0">
+                    <Clock size={15} className="text-green-600" />
+                  </div>
+                  <div>
+                    <div className="text-xs text-slate/60 mb-1 font-semibold uppercase tracking-wider">Hours</div>
+                    <div className="text-sm text-navy">
+                      Monday – Friday
+                      <br />
+                      8:00 AM – 5:00 PM WAT
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-10 pt-8 border-t border-slate-100">
+                <div className="text-xs text-slate/60 mb-3 font-semibold uppercase tracking-wider">Website</div>
+                <a href="https://www.nasenigolborn.ng" target="_blank" rel="noopener noreferrer" className="text-sm text-navy hover:text-green-600 transition-colors">
+                  www.nasenigolborn.ng
+                </a>
               </div>
             </div>
           </div>
