@@ -85,15 +85,6 @@ export default function LeadershipCarousel({ members }: { members: Member[] }) {
             </span>
           </div>
 
-          {/* Affiliation badge */}
-          {member.affiliation && (
-            <div className="absolute top-5 right-5 z-10">
-              <span className="bg-white/20 backdrop-blur-sm text-white text-[10px] font-semibold px-3 py-1 rounded-full border border-white/30 tracking-wide">
-                {member.affiliation}
-              </span>
-            </div>
-          )}
-
           {/* Pause indicator */}
           {paused && (
             <div className="absolute bottom-6 right-6 z-10">

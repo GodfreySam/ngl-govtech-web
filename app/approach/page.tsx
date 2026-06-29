@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { HeroBgApproach } from "@/components/sections/HeroBgVariants";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Compass, Users, GraduationCap, Handshake } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 
 export const metadata: Metadata = {
@@ -168,14 +168,14 @@ export default function ApproachPage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Context First", desc: "We never apply generic solutions. Every recommendation is grounded in Nigeria's specific institutional reality." },
-              { title: "Co-creation", desc: "Stakeholders are partners in design, not audiences for delivery. The best solutions are built together." },
-              { title: "Knowledge Transfer", desc: "Every engagement leaves the institution more capable than it was before NGL arrived." },
-              { title: "Long-Term Partnership", desc: "We measure success in years, not project milestones. Our relationship continues beyond go-live." },
-            ].map(({ title, desc }) => (
+              { icon: Compass,      title: "Context First",        desc: "We never apply generic solutions. Every recommendation is grounded in Nigeria's specific institutional reality." },
+              { icon: Users,        title: "Co-creation",          desc: "Stakeholders are partners in design, not audiences for delivery. The best solutions are built together." },
+              { icon: GraduationCap, title: "Knowledge Transfer",  desc: "Every engagement leaves the institution more capable than it was before NGL arrived." },
+              { icon: Handshake,    title: "Long-Term Partnership", desc: "We measure success in years, not project milestones. Our relationship continues beyond go-live." },
+            ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="card-base p-6">
                 <div className="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center mb-4">
-                  <div className="w-3 h-3 rounded-full bg-green" />
+                  <Icon size={20} className="text-green-600" />
                 </div>
                 <h3 className="font-display font-semibold text-navy text-sm mb-2">{title}</h3>
                 <p className="text-slate text-xs leading-relaxed">{desc}</p>
