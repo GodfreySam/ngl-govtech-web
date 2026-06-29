@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy: #0B1D3E;
+    --navy-dark: #060F21;
+    --teal: #0D7C6C;
+    --slate: #64748B;
+    --light: #F7F8FA;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-navy bg-white antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+
+  :focus-visible {
+    outline: 2px solid #0D7C6C;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply max-w-[1440px] mx-auto px-5 md:px-10 xl:px-16;
+  }
+
+  .section-pad {
+    @apply py-12 sm:py-16 lg:py-28;
+  }
+
+  .section-pad-sm {
+    @apply py-10 sm:py-14 lg:py-20;
+  }
+
+  .label-tag {
+    @apply inline-flex items-center text-xs font-semibold uppercase tracking-widest text-green-600 mb-4;
+  }
+
+  .label-tag-white {
+    @apply inline-flex items-center text-xs font-semibold uppercase tracking-widest text-white/70 mb-4;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-green font-semibold text-white text-sm transition-all duration-200 hover:bg-green-500 hover:shadow-lg hover:shadow-green-400/30 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-2 border-white/30 font-semibold text-white text-sm transition-all duration-200 hover:border-white hover:bg-white/10 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-2 border-navy font-semibold text-navy text-sm transition-all duration-200 hover:bg-navy hover:text-white active:scale-95;
+  }
+
+  .btn-white {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white font-semibold text-green text-sm transition-all duration-200 hover:bg-white/90 hover:shadow-lg active:scale-95;
+  }
+
+  .card-base {
+    @apply bg-white rounded-2xl border border-slate-100 shadow-card transition-all duration-300 ease-out hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-navy-200 hover:text-white transition-colors duration-150;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-green-300 to-green-500 bg-clip-text text-transparent;
+  }
+
+  .divider-line {
+    @apply h-px bg-gradient-to-r from-transparent via-navy-200/30 to-transparent my-16;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+
+  .reveal[data-visible="true"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+
+  .bg-dot-pattern {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .bg-grid-pattern {
+    background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}

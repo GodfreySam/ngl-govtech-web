@@ -1,0 +1,38 @@
+fragment PageParts on Page {
+  __typename
+  title
+  description
+  body
+}
+
+fragment InsightParts on Insight {
+  __typename
+  title
+  description
+  category
+  date
+  thumbnail
+  author
+  body
+}
+
+fragment TeamMemberParts on TeamMember {
+  __typename
+  name
+  title
+  bio
+  photo
+  linkedin
+  order
+}
+
+fragment SiteConfigParts on SiteConfig {
+  __typename
+  siteName
+  tagline
+  email
+  phone
+  address
+  linkedIn
+  twitter
+}
