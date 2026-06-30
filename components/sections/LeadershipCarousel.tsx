@@ -104,22 +104,37 @@ export default function LeadershipCarousel({ members }: { members: Member[] }) {
         <div className="shrink-0 w-2" aria-hidden="true" />
       </div>
 
-      {/* ── Desktop: CSS grid ── */}
-      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {members.map((member, i) => (
-          <div
-            key={member.name}
-            className={cn(
-              // 5 items in a 3-col grid → last item at row-2, col-1.
-              // Shift it to col-2 so row-2 reads as [card4][card5][empty] — a centred pair.
-              i === members.length - 1 && members.length % 3 === 2
-                ? "lg:col-start-2"
-                : undefined
-            )}
-          >
-            <MemberCard member={member} index={i} />
-          </div>
-        ))}
+      {/*
+        ── Desktop: CSS grid ──
+        Base (md–xl):  4-col grid, each card spans 2 → 2 cards per row.
+          5th card: col-start-2 col-span-2  → sits centered in cols 2-3.
+
+        XL (≥1280px):  6-col grid, each card spans 2 → 3 cards per row.
+          4th card: col-start-2             → cols 2-3
+          5th card: col-start-4             → cols 4-5
+          Bottom row reads [·][card4][card5][·] — a centered pair.
+      */}
+      <div className="hidden md:grid md:grid-cols-4 xl:grid-cols-6 gap-6">
+        {members.map((member, i) => {
+          const n = members.length;
+          const lastRowStart = n % 3 === 0 ? n : n - (n % 3); // first index of last xl-row
+          const xlColStart =
+            i === lastRowStart     ? "xl:col-start-2" :
+            i === lastRowStart + 1 ? "xl:col-start-4" :
+            undefined;
+          // md centering: last item when count is odd
+          const mdColStart =
+            i === n - 1 && n % 2 === 1 ? "md:col-start-2" : undefined;
+
+          return (
+            <div
+              key={member.name}
+              className={cn("col-span-2", xlColStart, mdColStart)}
+            >
+              <MemberCard member={member} index={i} />
+            </div>
+          );
+        })}
       </div>
     </>
   );
