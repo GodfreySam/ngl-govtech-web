@@ -34,9 +34,9 @@
 
 @layer components {
   .container-wide {
-    @apply max-w-[1440px] mx-auto w-full;
-    padding-left: clamp(1rem, 4vw, 5rem);
-    padding-right: clamp(1rem, 4vw, 5rem);
+    @apply max-w-[1800px] mx-auto w-full;
+    padding-left: clamp(1rem, 3vw, 2.5rem);
+    padding-right: clamp(1rem, 3vw, 2.5rem);
   }
 
   .section-pad {
