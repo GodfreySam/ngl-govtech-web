@@ -24,18 +24,18 @@ const boardMembers = [
     photo: "/images/team/kehinde-samuel-ajakaiye.png",
   },
   {
-    name: "Esther Jadaman",
-    title: "Managing Director",
-    affiliation: "Golborn Representative",
-    initials: "EJ",
-    photo: "/images/team/esther-jadaman.png",
-  },
-  {
     name: "Godwin Arigbonu",
     title: "Executive Director",
     affiliation: "Golborn Representative",
     initials: "GA",
     photo: "/images/team/godwin-arigbonu.png",
+  },
+  {
+    name: "Esther Jadaman",
+    title: "Managing Director",
+    affiliation: "Golborn Representative",
+    initials: "EJ",
+    photo: "/images/team/esther-jadaman.png",
   },
   {
     name: "Paul Ebiala",
